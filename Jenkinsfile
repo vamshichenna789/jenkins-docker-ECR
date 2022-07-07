@@ -17,7 +17,7 @@ pipeline {
         } 
         stage('Test'){ 
             steps { 
-                sh 'trivy image docker-demo:${env.BUILD_ID} || exit 0' 
+                sh 'trivy image docker-demo:latest || exit 0' 
             } 
         } 
         stage('Deploy') { 
